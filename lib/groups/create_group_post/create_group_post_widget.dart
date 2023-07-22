@@ -196,7 +196,7 @@ class _CreateGroupPostWidgetState extends State<CreateGroupPostWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primary,
+                    color: Color(0xC20D8EED),
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Readex Pro',
                           color: Colors.white,
@@ -402,7 +402,7 @@ class _CreateGroupPostWidgetState extends State<CreateGroupPostWidget> {
                             buttonSize: 60.0,
                             icon: Icon(
                               Icons.add_photo_alternate_outlined,
-                              color: FlutterFlowTheme.of(context).primary,
+                              color: Color(0xC20D8EED),
                               size: 32.0,
                             ),
                             onPressed: () async {
@@ -480,7 +480,7 @@ class _CreateGroupPostWidgetState extends State<CreateGroupPostWidget> {
                             buttonSize: 60.0,
                             icon: Icon(
                               Icons.video_collection,
-                              color: FlutterFlowTheme.of(context).primary,
+                              color: Color(0xC20D8EED),
                               size: 32.0,
                             ),
                             onPressed: () async {

@@ -673,7 +673,7 @@ class _DashboardGroupWidgetState extends State<DashboardGroupWidget> {
                                                                             child:
                                                                                 Icon(
                                                                               Icons.remove_red_eye,
-                                                                              color: FlutterFlowTheme.of(context).primary,
+                                                                              color: Color(0xC20D8EED),
                                                                               size: 30.0,
                                                                             ),
                                                                           ),

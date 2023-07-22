@@ -51,7 +51,7 @@ class _AddGroupPageWidgetState extends State<AddGroupPageWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: Color(0xFF086D62),
+          backgroundColor: Color(0xC20D8EED),
           automaticallyImplyLeading: false,
           leading: InkWell(
             splashColor: Colors.transparent,
@@ -178,39 +178,6 @@ class _AddGroupPageWidgetState extends State<AddGroupPageWidget> {
                           keyboardType: TextInputType.multiline,
                           validator: _model.textController2Validator
                               .asValidator(context),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            18.0, 0.0, 18.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Group is Private',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                            ),
-                            Switch(
-                              value: _model.switchValue ??= true,
-                              onChanged: (newValue) async {
-                                setState(() => _model.switchValue = newValue!);
-                              },
-                              activeColor: Color(0xFF086D62),
-                              activeTrackColor:
-                                  FlutterFlowTheme.of(context).accent1,
-                              inactiveTrackColor:
-                                  FlutterFlowTheme.of(context).alternate,
-                              inactiveThumbColor:
-                                  FlutterFlowTheme.of(context).secondaryText,
-                            ),
-                          ],
                         ),
                       ),
                       Padding(
@@ -355,7 +322,6 @@ class _AddGroupPageWidgetState extends State<AddGroupPageWidget> {
                                 groupTitle: _model.textController1.text,
                                 about: _model.textController2.text,
                                 groupPhoto: _model.uploadedFileUrl,
-                                isPrivate: _model.switchValue,
                                 createdByRef: currentUserReference,
                                 isBanned: false,
                               ),
@@ -386,7 +352,7 @@ class _AddGroupPageWidgetState extends State<AddGroupPageWidget> {
                                 0.0, 0.0, 0.0, 0.0),
                             iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xFF086D62),
+                            color: Color(0xC20D8EED),
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(

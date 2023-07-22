@@ -30,8 +30,6 @@ class AddGroupPageModel extends FlutterFlowModel {
   // State field(s) for TextField widget.
   TextEditingController? textController2;
   String? Function(BuildContext, String?)? textController2Validator;
-  // State field(s) for Switch widget.
-  bool? switchValue;
   bool isDataUploading = false;
   FFUploadedFile uploadedLocalFile =
       FFUploadedFile(bytes: Uint8List.fromList([]));

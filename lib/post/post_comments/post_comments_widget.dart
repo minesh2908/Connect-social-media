@@ -130,7 +130,7 @@ class _PostCommentsWidgetState extends State<PostCommentsWidget>
                   },
                 ).then((value) => setState(() {}));
               },
-              backgroundColor: FlutterFlowTheme.of(context).primary,
+              backgroundColor: Color(0xC20D8EED),
               elevation: 8.0,
               child: Icon(
                 Icons.add,

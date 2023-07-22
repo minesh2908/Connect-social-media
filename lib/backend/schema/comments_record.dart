@@ -51,16 +51,6 @@ class CommentsRecord extends FirestoreRecord {
   DocumentReference? get groupRef => _groupRef;
   bool hasGroupRef() => _groupRef != null;
 
-  // "MarketIems_ref" field.
-  DocumentReference? _marketIemsRef;
-  DocumentReference? get marketIemsRef => _marketIemsRef;
-  bool hasMarketIemsRef() => _marketIemsRef != null;
-
-  // "BizPage_ref" field.
-  DocumentReference? _bizPageRef;
-  DocumentReference? get bizPageRef => _bizPageRef;
-  bool hasBizPageRef() => _bizPageRef != null;
-
   // "createdBy_ref" field.
   DocumentReference? _createdByRef;
   DocumentReference? get createdByRef => _createdByRef;
@@ -74,8 +64,6 @@ class CommentsRecord extends FirestoreRecord {
     _likeByUsers = getDataList(snapshotData['LikeBy_Users']);
     _postRef = snapshotData['Post_ref'] as DocumentReference?;
     _groupRef = snapshotData['Group_ref'] as DocumentReference?;
-    _marketIemsRef = snapshotData['MarketIems_ref'] as DocumentReference?;
-    _bizPageRef = snapshotData['BizPage_ref'] as DocumentReference?;
     _createdByRef = snapshotData['createdBy_ref'] as DocumentReference?;
   }
 
@@ -120,8 +108,6 @@ Map<String, dynamic> createCommentsRecordData({
   int? likes,
   DocumentReference? postRef,
   DocumentReference? groupRef,
-  DocumentReference? marketIemsRef,
-  DocumentReference? bizPageRef,
   DocumentReference? createdByRef,
 }) {
   final firestoreData = mapToFirestore(
@@ -132,8 +118,6 @@ Map<String, dynamic> createCommentsRecordData({
       'Likes': likes,
       'Post_ref': postRef,
       'Group_ref': groupRef,
-      'MarketIems_ref': marketIemsRef,
-      'BizPage_ref': bizPageRef,
       'createdBy_ref': createdByRef,
     }.withoutNulls,
   );
@@ -154,8 +138,6 @@ class CommentsRecordDocumentEquality implements Equality<CommentsRecord> {
         listEquality.equals(e1?.likeByUsers, e2?.likeByUsers) &&
         e1?.postRef == e2?.postRef &&
         e1?.groupRef == e2?.groupRef &&
-        e1?.marketIemsRef == e2?.marketIemsRef &&
-        e1?.bizPageRef == e2?.bizPageRef &&
         e1?.createdByRef == e2?.createdByRef;
   }
 
@@ -168,8 +150,6 @@ class CommentsRecordDocumentEquality implements Equality<CommentsRecord> {
         e?.likeByUsers,
         e?.postRef,
         e?.groupRef,
-        e?.marketIemsRef,
-        e?.bizPageRef,
         e?.createdByRef
       ]);
 

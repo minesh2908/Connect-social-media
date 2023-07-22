@@ -25,8 +25,6 @@ export '/pages/search_user/search_user_widget.dart' show SearchUserWidget;
 export '/chat/chat_page/chat_page_widget.dart' show ChatPageWidget;
 export '/chat/all_chats_page/all_chats_page_widget.dart'
     show AllChatsPageWidget;
-export '/chat/add_chat_users_page/add_chat_users_page_widget.dart'
-    show AddChatUsersPageWidget;
 export '/on_boarding_page/login_page/login_page_widget.dart'
     show LoginPageWidget;
 export '/followers_list/followers_list_widget.dart' show FollowersListWidget;

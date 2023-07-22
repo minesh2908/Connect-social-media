@@ -202,16 +202,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : AllChatsPageWidget(),
         ),
         FFRoute(
-          name: 'AddChatUsersPage',
-          path: '/addChatUsersPage',
-          asyncParams: {
-            'chat': getDoc(['chats'], ChatsRecord.fromSnapshot),
-          },
-          builder: (context, params) => AddChatUsersPageWidget(
-            chat: params.getParam('chat', ParamType.Document),
-          ),
-        ),
-        FFRoute(
           name: 'LoginPage',
           path: '/loginPage',
           builder: (context, params) => LoginPageWidget(),

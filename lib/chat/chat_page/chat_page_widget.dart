@@ -116,7 +116,7 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
               ? FFChatPage(
                   chatInfo: snapshot.data!,
                   allowImages: true,
-                  backgroundColor: Color(0xFFF2F4F8),
+                  backgroundColor: Color(0x00000000),
                   timeDisplaySetting: TimeDisplaySetting.alwaysVisible,
                   currentUserBoxDecoration: BoxDecoration(
                     color: Colors.white,

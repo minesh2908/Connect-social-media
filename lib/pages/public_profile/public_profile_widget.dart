@@ -202,7 +202,7 @@ class _PublicProfileWidgetState extends State<PublicProfileWidget> {
                                         0.0, 0.0, 0.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xFF249689),
+                                    color: Color(0xFF39D2C0),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
@@ -308,7 +308,7 @@ class _PublicProfileWidgetState extends State<PublicProfileWidget> {
                                     0.0, 0.0, 0.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFF0EF1D7),
+                                color: Color(0xFF249689),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -934,7 +934,9 @@ class _PublicProfileWidgetState extends State<PublicProfileWidget> {
                                   stream: queryGroupsRecord(
                                     queryBuilder: (groupsRecord) => groupsRecord
                                         .where('Members_ref',
-                                            arrayContains: currentUserReference)
+                                            arrayContains:
+                                                publicProfileUsersRecord
+                                                    .reference)
                                         .orderBy('GroupTitle'),
                                   ),
                                   builder: (context, snapshot) {

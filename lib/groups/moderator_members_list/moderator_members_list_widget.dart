@@ -117,8 +117,8 @@ class _ModeratorMembersListWidgetState
                           Align(
                             alignment: Alignment(0.0, 0),
                             child: TabBar(
-                              labelColor: Color(0xFFE6A623),
-                              unselectedLabelColor: Color(0xFF9ECAEB),
+                              labelColor: Color(0xFF0093FF),
+                              unselectedLabelColor: Color(0xFF96B0C4),
                               labelStyle:
                                   FlutterFlowTheme.of(context).titleMedium,
                               indicatorColor:

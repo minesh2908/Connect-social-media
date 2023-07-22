@@ -255,7 +255,7 @@ class _GroupMemberListWidgetState extends State<GroupMemberListWidget>
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      '${rowUsersRecord.firstname}${rowUsersRecord.lastname}',
+                                                      '${rowUsersRecord.firstname}',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .headlineSmall
@@ -377,10 +377,31 @@ class _GroupMemberListWidgetState extends State<GroupMemberListWidget>
                                                 ),
                                               ),
                                             ),
-                                            Icon(
-                                              Icons.message,
-                                              color: Color(0xFF57636C),
-                                              size: 24.0,
+                                            InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              onTap: () async {
+                                                context.pushNamed(
+                                                  'ChatPage',
+                                                  queryParameters: {
+                                                    'chatUser': serializeParam(
+                                                      rowUsersRecord,
+                                                      ParamType.Document,
+                                                    ),
+                                                  }.withoutNulls,
+                                                  extra: <String, dynamic>{
+                                                    'chatUser': rowUsersRecord,
+                                                  },
+                                                );
+                                              },
+                                              child: Icon(
+                                                Icons.message,
+                                                color: Color(0xFF57636C),
+                                                size: 24.0,
+                                              ),
                                             ),
                                           ],
                                         ),

@@ -173,7 +173,7 @@ class _GroupModeratorsListWidgetState extends State<GroupModeratorsListWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                '${rowUsersRecord.firstname}  ${rowUsersRecord.lastname}',
+                                                '${rowUsersRecord.firstname}  ',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium

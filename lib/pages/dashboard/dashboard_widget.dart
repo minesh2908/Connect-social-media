@@ -807,38 +807,6 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                                                         ),
                                                                   ),
                                                                 ),
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          3.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child:
-                                                                      AuthUserStreamWidget(
-                                                                    builder:
-                                                                        (context) =>
-                                                                            Text(
-                                                                      valueOrDefault(
-                                                                          currentUserDocument
-                                                                              ?.lastname,
-                                                                          ''),
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyLarge
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Plus Jakarta Sans',
-                                                                            color:
-                                                                                Color(0xFF14181B),
-                                                                            fontSize:
-                                                                                16.0,
-                                                                            fontWeight:
-                                                                                FontWeight.w500,
-                                                                          ),
-                                                                    ),
-                                                                  ),
-                                                                ),
                                                               ],
                                                             ),
                                                             RichText(

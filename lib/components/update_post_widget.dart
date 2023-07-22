@@ -260,9 +260,7 @@ class _UpdatePostWidgetState extends State<UpdatePostWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondary,
+                                                color: Color(0xC20D8EED),
                                                 fontWeight: FontWeight.w500,
                                               ),
                                         ),
