@@ -96,13 +96,13 @@ class _ChatPageWidgetState extends State<ChatPageWidget> {
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Readex Pro',
                     color: FlutterFlowTheme.of(context).primaryBtnText,
-                    fontSize: 18.0,
+                    fontSize: 20.0,
                   ),
             ),
           ],
         ),
         actions: [],
-        centerTitle: false,
+        centerTitle: true,
         elevation: 2.0,
       ),
       body: SafeArea(

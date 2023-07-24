@@ -163,7 +163,7 @@ class _ModerateViewMembersListWidgetState
                                       iconPadding:
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0xFFE6A623),
+                                      color: Color(0xC20D8EED),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(

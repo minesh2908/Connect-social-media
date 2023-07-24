@@ -287,7 +287,7 @@ class _GroupMemberListWidgetState extends State<GroupMemberListWidget>
                                                               fontFamily:
                                                                   'Plus Jakarta Sans',
                                                               color: Color(
-                                                                  0xFF4B39EF),
+                                                                  0xC20D8EED),
                                                               fontSize: 12.0,
                                                               fontWeight:
                                                                   FontWeight

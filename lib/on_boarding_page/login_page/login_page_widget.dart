@@ -65,26 +65,26 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          width: double.infinity,
-                          height: 140.0,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(16.0),
-                              bottomRight: Radius.circular(16.0),
-                              topLeft: Radius.circular(0.0),
-                              topRight: Radius.circular(0.0),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 50.0, 0.0, 0.0),
+                          child: Container(
+                            width: double.infinity,
+                            height: 140.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              borderRadius: BorderRadius.circular(0.0),
                             ),
-                          ),
-                          alignment: AlignmentDirectional(-1.0, 0.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                32.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              'Social Media',
-                              style: FlutterFlowTheme.of(context).displaySmall,
+                            alignment: AlignmentDirectional(0.0, 1.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.asset(
+                                'assets/images/Screenshot_(6).png',
+                                width: 300.0,
+                                height: 200.0,
+                                fit: BoxFit.fitHeight,
+                              ),
                             ),
                           ),
                         ),
@@ -95,20 +95,15 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 32.0, 32.0, 32.0, 32.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text(
-                                  'Welcome Back',
-                                  style:
-                                      FlutterFlowTheme.of(context).displaySmall,
-                                ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 12.0, 0.0, 24.0),
+                                      0.0, 0.0, 0.0, 20.0),
                                   child: Text(
-                                    'Let\'s get started by filling out the form below.',
+                                    'Welcome Back',
                                     style: FlutterFlowTheme.of(context)
-                                        .labelMedium,
+                                        .displaySmall,
                                   ),
                                 ),
                                 Padding(
@@ -127,8 +122,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                             .labelMedium,
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .accent3,
+                                            color: Color(0xFFE0E3E7),
                                             width: 2.0,
                                           ),
                                           borderRadius:
@@ -136,8 +130,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: Color(0xC20D8EED),
                                             width: 2.0,
                                           ),
                                           borderRadius:
@@ -190,8 +183,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                             .labelMedium,
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .accent3,
+                                            color: Color(0xFFE0E3E7),
                                             width: 2.0,
                                           ),
                                           borderRadius:
@@ -199,8 +191,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: Color(0xC20D8EED),
                                             width: 2.0,
                                           ),
                                           borderRadius:
@@ -311,8 +302,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       iconPadding:
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
+                                      color: Color(0xC20D8EED),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -328,11 +318,62 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     ),
                                   ),
                                 ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 24.0),
+                                  child: Container(
+                                    width: double.infinity,
+                                    child: Stack(
+                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      children: [
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 12.0, 0.0, 12.0),
+                                            child: Container(
+                                              width: double.infinity,
+                                              height: 2.0,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .alternate,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Container(
+                                            width: 70.0,
+                                            height: 32.0,
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryBackground,
+                                            ),
+                                            alignment:
+                                                AlignmentDirectional(0.0, 0.0),
+                                            child: Text(
+                                              'OR',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelLarge,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
 
                                 // You will have to add an action on this rich text to go to your login page.
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 12.0, 0.0, 12.0),
+                                      0.0, 0.0, 0.0, 12.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
                                     focusColor: Colors.transparent,
@@ -354,9 +395,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
+                                                  color: Color(0xC20D8EED),
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                           )

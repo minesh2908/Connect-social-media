@@ -339,8 +339,10 @@ class _PublicProfileWidgetState extends State<PublicProfileWidget> {
                           Align(
                             alignment: Alignment(0.0, 0),
                             child: TabBar(
-                              labelColor: Color(0xFFF8555B),
-                              unselectedLabelColor: Color(0xFFF5989E),
+                              labelColor:
+                                  FlutterFlowTheme.of(context).secondary,
+                              unselectedLabelColor:
+                                  FlutterFlowTheme.of(context).accent2,
                               labelStyle: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(

@@ -81,7 +81,7 @@ class _AddPostToFeedWidgetState extends State<AddPostToFeedWidget> {
                       postedByRef: currentUserReference,
                       content: _model.textController.text,
                       photo: _model.uploadedFileUrl1,
-                      video: _model.uploadedFileUrl1,
+                      video: _model.uploadedFileUrl2,
                       likes: 1,
                     ),
                     'DateCreated': FieldValue.serverTimestamp(),

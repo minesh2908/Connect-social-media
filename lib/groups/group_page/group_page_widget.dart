@@ -74,8 +74,10 @@ class _GroupPageWidgetState extends State<GroupPageWidget> {
           key: scaffoldKey,
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           floatingActionButton: Visibility(
-            visible: !groupPageGroupsRecord.silencedMemberRed
-                .contains(currentUserReference),
+            visible: groupPageGroupsRecord.membersRef
+                    .contains(currentUserReference) &&
+                !groupPageGroupsRecord.silencedMemberRed
+                    .contains(currentUserReference),
             child: FloatingActionButton(
               onPressed: () async {
                 context.pushNamed(
@@ -88,11 +90,11 @@ class _GroupPageWidgetState extends State<GroupPageWidget> {
                   }.withoutNulls,
                 );
               },
-              backgroundColor: Color(0xFB00FFDE),
+              backgroundColor: Color(0xC20D8EED),
               elevation: 8.0,
               child: Icon(
                 Icons.add,
-                color: Colors.black,
+                color: FlutterFlowTheme.of(context).primaryBtnText,
                 size: 24.0,
               ),
             ),

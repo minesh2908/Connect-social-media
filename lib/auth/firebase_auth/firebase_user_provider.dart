@@ -5,8 +5,8 @@ import '../base_auth_user_provider.dart';
 
 export '../base_auth_user_provider.dart';
 
-class SocialMediaAppFirebaseUser extends BaseAuthUser {
-  SocialMediaAppFirebaseUser(this.user);
+class ConnectFirebaseUser extends BaseAuthUser {
+  ConnectFirebaseUser(this.user);
   User? user;
   bool get loggedIn => user != null;
 
@@ -47,18 +47,17 @@ class SocialMediaAppFirebaseUser extends BaseAuthUser {
 
   static BaseAuthUser fromUserCredential(UserCredential userCredential) =>
       fromFirebaseUser(userCredential.user);
-  static BaseAuthUser fromFirebaseUser(User? user) =>
-      SocialMediaAppFirebaseUser(user);
+  static BaseAuthUser fromFirebaseUser(User? user) => ConnectFirebaseUser(user);
 }
 
-Stream<BaseAuthUser> socialMediaAppFirebaseUserStream() => FirebaseAuth.instance
+Stream<BaseAuthUser> connectFirebaseUserStream() => FirebaseAuth.instance
         .authStateChanges()
         .debounce((user) => user == null && !loggedIn
             ? TimerStream(true, const Duration(seconds: 1))
             : Stream.value(user))
         .map<BaseAuthUser>(
       (user) {
-        currentUser = SocialMediaAppFirebaseUser(user);
+        currentUser = ConnectFirebaseUser(user);
         return currentUser!;
       },
     );

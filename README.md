@@ -1,4 +1,4 @@
-# socialMediaApp
+# Connect
 
 A new Flutter project.
 

@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_autocomplete_options_list.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -71,7 +72,8 @@ class _SearchUserWidgetState extends State<SearchUserWidget> {
             ),
           );
         }
-        List<UsersRecord> searchUserUsersRecordList = snapshot.data!;
+        List<UsersRecord> searchUserUsersRecordList =
+            snapshot.data!.where((u) => u.uid != currentUserUid).toList();
         return GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
           child: WillPopScope(
@@ -160,7 +162,6 @@ class _SearchUserWidgetState extends State<SearchUserWidget> {
                             });
                           },
                         ),
-                        autofocus: true,
                         obscureText: false,
                         decoration: InputDecoration(
                           labelStyle: FlutterFlowTheme.of(context)
@@ -239,6 +240,7 @@ class _SearchUserWidgetState extends State<SearchUserWidget> {
                             UsersRecord.collection,
                           ),
                           padding: EdgeInsets.zero,
+                          primary: false,
                           shrinkWrap: true,
                           reverse: false,
                           scrollDirection: Axis.vertical,
@@ -406,6 +408,7 @@ class _SearchUserWidgetState extends State<SearchUserWidget> {
                                 _model.simpleSearchResults.toList();
                             return ListView.builder(
                               padding: EdgeInsets.zero,
+                              primary: false,
                               shrinkWrap: true,
                               scrollDirection: Axis.vertical,
                               itemCount: userSearchList.length,

@@ -1,7 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -9,7 +8,6 @@ import '/flutter_flow/upload_data.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -48,9 +46,6 @@ class CreateUserProfileModel extends FlutterFlowModel {
     return null;
   }
 
-  // State field(s) for zipcode widget.
-  TextEditingController? zipcodeController;
-  String? Function(BuildContext, String?)? zipcodeControllerValidator;
   // State field(s) for myBio widget.
   TextEditingController? myBioController;
   String? Function(BuildContext, String?)? myBioControllerValidator;
@@ -67,7 +62,6 @@ class CreateUserProfileModel extends FlutterFlowModel {
     firstnameController?.dispose();
     lastnameController?.dispose();
     usernameController?.dispose();
-    zipcodeController?.dispose();
     myBioController?.dispose();
   }
 

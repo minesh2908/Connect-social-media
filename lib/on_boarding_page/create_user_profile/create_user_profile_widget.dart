@@ -1,7 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -9,7 +8,6 @@ import '/flutter_flow/upload_data.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'create_user_profile_model.dart';
@@ -36,7 +34,6 @@ class _CreateUserProfileWidgetState extends State<CreateUserProfileWidget> {
     _model.firstnameController ??= TextEditingController();
     _model.lastnameController ??= TextEditingController();
     _model.usernameController ??= TextEditingController();
-    _model.zipcodeController ??= TextEditingController();
     _model.myBioController ??= TextEditingController();
   }
 
@@ -59,29 +56,15 @@ class _CreateUserProfileWidgetState extends State<CreateUserProfileWidget> {
           key: scaffoldKey,
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           appBar: AppBar(
-            backgroundColor: FlutterFlowTheme.of(context).primary,
+            backgroundColor: Color(0xC20D8EED),
             automaticallyImplyLeading: false,
-            leading: FlutterFlowIconButton(
-              borderColor: Colors.transparent,
-              borderRadius: 30.0,
-              borderWidth: 1.0,
-              buttonSize: 60.0,
-              icon: Icon(
-                Icons.arrow_back_rounded,
-                color: Colors.white,
-                size: 30.0,
-              ),
-              onPressed: () async {
-                context.pop();
-              },
-            ),
             title: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
               child: Text(
                 'Create your Profile',
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily: 'Outfit',
-                      color: FlutterFlowTheme.of(context).primaryText,
+                      color: FlutterFlowTheme.of(context).primaryBtnText,
                       fontSize: 22.0,
                     ),
               ),
@@ -221,14 +204,14 @@ class _CreateUserProfileWidgetState extends State<CreateUserProfileWidget> {
                                   photoUrl: _model.uploadedFileUrl,
                                 ));
                               },
-                              text: 'Upload Image',
+                              text: 'Upload Profile Pic',
                               options: FFButtonOptions(
                                 height: 40.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: Color(0xC20D8EED),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -258,8 +241,8 @@ class _CreateUserProfileWidgetState extends State<CreateUserProfileWidget> {
                                     FlutterFlowTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                    color:
+                                        FlutterFlowTheme.of(context).lineColor,
                                     width: 2.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
@@ -311,8 +294,8 @@ class _CreateUserProfileWidgetState extends State<CreateUserProfileWidget> {
                                     FlutterFlowTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                    color:
+                                        FlutterFlowTheme.of(context).lineColor,
                                     width: 2.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
@@ -364,8 +347,8 @@ class _CreateUserProfileWidgetState extends State<CreateUserProfileWidget> {
                                     FlutterFlowTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                    color:
+                                        FlutterFlowTheme.of(context).lineColor,
                                     width: 2.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
@@ -405,64 +388,6 @@ class _CreateUserProfileWidgetState extends State<CreateUserProfileWidget> {
                           ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                20.0, 0.0, 20.0, 16.0),
-                            child: TextFormField(
-                              controller: _model.zipcodeController,
-                              obscureText: false,
-                              decoration: InputDecoration(
-                                labelText: 'ZipCode',
-                                labelStyle:
-                                    FlutterFlowTheme.of(context).bodySmall,
-                                hintStyle:
-                                    FlutterFlowTheme.of(context).bodySmall,
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
-                                    width: 2.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 2.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                errorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 2.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                focusedErrorBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0x00000000),
-                                    width: 2.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                filled: true,
-                                fillColor: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                                contentPadding: EdgeInsetsDirectional.fromSTEB(
-                                    20.0, 24.0, 0.0, 24.0),
-                              ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
-                              maxLines: null,
-                              keyboardType: TextInputType.number,
-                              validator: _model.zipcodeControllerValidator
-                                  .asValidator(context),
-                              inputFormatters: [
-                                FilteringTextInputFormatter.allow(
-                                    RegExp('[0-9]'))
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 20.0, 12.0),
                             child: TextFormField(
                               controller: _model.myBioController,
@@ -475,8 +400,8 @@ class _CreateUserProfileWidgetState extends State<CreateUserProfileWidget> {
                                     FlutterFlowTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                    color:
+                                        FlutterFlowTheme.of(context).lineColor,
                                     width: 2.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
@@ -526,7 +451,6 @@ class _CreateUserProfileWidgetState extends State<CreateUserProfileWidget> {
                           displayName: _model.usernameController.text,
                           firstname: _model.firstnameController.text,
                           lastname: _model.lastnameController.text,
-                          zipcode: int.tryParse(_model.zipcodeController.text),
                           bio: _model.myBioController.text,
                           photoUrl: _model.uploadedFileUrl,
                         ));
@@ -541,7 +465,7 @@ class _CreateUserProfileWidgetState extends State<CreateUserProfileWidget> {
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primary,
+                        color: Color(0xC20D8EED),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Readex Pro',

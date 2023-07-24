@@ -63,7 +63,7 @@ class _AddGroupPageWidgetState extends State<AddGroupPageWidget> {
             },
             child: Icon(
               Icons.clear,
-              color: Colors.black,
+              color: FlutterFlowTheme.of(context).primaryBtnText,
               size: 26.0,
             ),
           ),
@@ -99,14 +99,14 @@ class _AddGroupPageWidgetState extends State<AddGroupPageWidget> {
                             hintStyle: FlutterFlowTheme.of(context).labelMedium,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0xFF086D62),
+                                color: FlutterFlowTheme.of(context).lineColor,
                                 width: 2.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: Color(0xC20D8EED),
                                 width: 2.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
@@ -145,14 +145,14 @@ class _AddGroupPageWidgetState extends State<AddGroupPageWidget> {
                             hintStyle: FlutterFlowTheme.of(context).labelMedium,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0xFF086D62),
+                                color: FlutterFlowTheme.of(context).lineColor,
                                 width: 2.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: Color(0xC20D8EED),
                                 width: 2.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
@@ -288,7 +288,8 @@ class _AddGroupPageWidgetState extends State<AddGroupPageWidget> {
                                         .titleSmall
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: Colors.black,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBtnText,
                                           fontWeight: FontWeight.w800,
                                         ),
                                     elevation: 0.0,

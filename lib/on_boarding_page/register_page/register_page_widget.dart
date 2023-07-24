@@ -68,31 +68,31 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          width: double.infinity,
-                          height: 140.0,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(16.0),
-                              bottomRight: Radius.circular(16.0),
-                              topLeft: Radius.circular(0.0),
-                              topRight: Radius.circular(0.0),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 50.0, 0.0, 0.0),
+                          child: Container(
+                            width: double.infinity,
+                            height: 140.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(16.0),
+                                bottomRight: Radius.circular(16.0),
+                                topLeft: Radius.circular(0.0),
+                                topRight: Radius.circular(0.0),
+                              ),
                             ),
-                          ),
-                          alignment: AlignmentDirectional(-1.0, 0.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                24.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              'Welcome to Social APP!',
-                              style: FlutterFlowTheme.of(context)
-                                  .displaySmall
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    fontSize: 26.0,
-                                  ),
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.asset(
+                                'assets/images/Screenshot_(6).png',
+                                width: 300.0,
+                                height: 200.0,
+                                fit: BoxFit.contain,
+                              ),
                             ),
                           ),
                         ),
@@ -112,20 +112,15 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                   24.0, 24.0, 24.0, 24.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Text(
-                                    'Create an account',
-                                    style: FlutterFlowTheme.of(context)
-                                        .headlineLarge,
-                                  ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 12.0, 0.0, 24.0),
+                                        0.0, 0.0, 0.0, 20.0),
                                     child: Text(
-                                      'Let\'s get started by filling out the form below.',
+                                      'Create an account',
                                       style: FlutterFlowTheme.of(context)
-                                          .labelMedium,
+                                          .headlineLarge,
                                     ),
                                   ),
                                   Padding(
@@ -148,7 +143,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                             borderSide: BorderSide(
                                               color:
                                                   FlutterFlowTheme.of(context)
-                                                      .primaryBackground,
+                                                      .lineColor,
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -156,9 +151,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                           ),
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: Color(0xC20D8EED),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -217,9 +210,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                                   .labelLarge,
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryBackground,
+                                              color: Color(0xFFE0E3E7),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -227,9 +218,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                           ),
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: Color(0xC20D8EED),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -306,9 +295,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                                   .labelLarge,
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryBackground,
+                                              color: Color(0xFFE0E3E7),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -316,9 +303,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                           ),
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: Color(0xC20D8EED),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -428,8 +413,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: FlutterFlowTheme.of(context)
-                                            .primary,
+                                        color: Color(0xC20D8EED),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -541,10 +525,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primary,
+                                                      color: Color(0xC20D8EED),
                                                       fontWeight:
                                                           FontWeight.w600,
                                                     ),

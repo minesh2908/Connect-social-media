@@ -45,11 +45,9 @@ class _AllChatsPageWidgetState extends State<AllChatsPageWidget> {
         automaticallyImplyLeading: false,
         title: Text(
           'All Chats',
-          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                fontFamily: 'Readex Pro',
+          style: FlutterFlowTheme.of(context).headlineMedium.override(
+                fontFamily: 'Outfit',
                 color: FlutterFlowTheme.of(context).primaryBtnText,
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
               ),
         ),
         actions: [],
